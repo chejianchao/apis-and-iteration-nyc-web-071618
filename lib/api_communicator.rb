@@ -40,7 +40,7 @@ def parse_character_movies(films_hash)
   films_hash.each {|name, films|
     puts name
     films.each {|film|
-      puts film
+      #puts film
       puts "\t#{film['title']}"
     }
   }
