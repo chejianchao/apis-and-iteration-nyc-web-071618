@@ -15,7 +15,7 @@ def get_character_movies_from_api(character)
     character_hash["results"].each {|result|
       if result["name"].downcase.include?( character )
         result["films"].each {|film_url|
-          res[result["name"] = helper(film_url)
+          res[result["name"]] = helper(film_url)
         }
       end
     }
