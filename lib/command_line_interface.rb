@@ -1,6 +1,6 @@
 def welcome
   # puts out a welcome message here!
-  puts "Welcome, press exit to quit the application"
+  puts "Welcome, press enter to quit the application"
 end
 
 def get_character_from_user
