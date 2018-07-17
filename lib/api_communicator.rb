@@ -36,6 +36,7 @@ end
 def parse_character_movies(films_hash)
   # some iteration magic and puts out the movies in a nice list
   films_hash.each {|film|
+    
     puts film["title"]
   }
 end
