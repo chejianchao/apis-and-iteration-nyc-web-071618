@@ -49,7 +49,7 @@ def parse_character_movies(films_hash)
       puts "\t#{film['title']}"
     }
   }
-  puts
+  puts ""
 end
 
 def show_character_movies(character)
