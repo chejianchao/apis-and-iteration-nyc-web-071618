@@ -13,7 +13,7 @@ def get_character_movies_from_api(character)
     character_hash = JSON.parse(all_characters)
     #total_page = character_hash["count"]
     character_hash["results"].each {|result|
-      if result["name"].downcase == character 
+      if result["name"].downcase.include?( character )
         result["films"].each {|film_url|
           res << helper(film_url)
         }
