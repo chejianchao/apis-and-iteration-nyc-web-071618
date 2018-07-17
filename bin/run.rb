@@ -6,7 +6,7 @@ require_relative "../lib/command_line_interface.rb"
 welcome
 loop do
   character = get_character_from_user
-  if character == "exit"
+  if character == ""
     break
   end
   show_character_movies(character)
