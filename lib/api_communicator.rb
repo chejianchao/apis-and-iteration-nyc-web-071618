@@ -16,7 +16,8 @@ def get_character_movies_from_api(character)
       if result["name"].downcase.include?( character )
         result["films"].each {|film_url|
           if res[result["name"]] == nil
-          res[result["name"]] = helper(film_url)
+            res[result["name"]] = []
+          res[result["name"]] << helper(film_url)
         }
       end
     }
