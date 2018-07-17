@@ -6,7 +6,7 @@ def get_character_movies_from_api(character)
   #make the web request
   cur_page = 1
   total_page = 1
-  res = []
+  res = {}
   while cur_page <= total_page
     all_characters = RestClient.get('http://www.swapi.co/api/people/',{:page=>cur_page})
     
@@ -15,7 +15,7 @@ def get_character_movies_from_api(character)
     character_hash["results"].each {|result|
       if result["name"].downcase.include?( character )
         result["films"].each {|film_url|
-          res << helper(film_url)
+          res[result["name"] = helper(film_url)
         }
       end
     }
@@ -35,9 +35,11 @@ end
 
 def parse_character_movies(films_hash)
   # some iteration magic and puts out the movies in a nice list
-  films_hash.each {|film|
-    
-    puts film["title"]
+  films_hash.each {|name, films|
+    puts name
+    films.each {|film|
+      puts "\t#{film['title']}"
+    }
   }
 end
 
