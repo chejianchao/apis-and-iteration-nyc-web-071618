@@ -17,6 +17,7 @@ def get_character_movies_from_api(character)
         result["films"].each {|film_url|
           if res[result["name"]] == nil
             res[result["name"]] = []
+          end
           res[result["name"]] << helper(film_url)
         }
       end
