@@ -38,6 +38,10 @@ end
 
 def parse_character_movies(films_hash)
   # some iteration magic and puts out the movies in a nice list
+  if films_hash.size == 0 
+    puts "There is nothing to be found"
+    return
+  end
   films_hash.each {|name, films|
     puts name
     films.each {|film|
